@@ -1,0 +1,4 @@
+name = "fmovies4u"
+pages_build_output_dir = "./dist"   # adjust if your build folder is different
+functions = "./functions"
+compatibility_date = "2024-01-01"
