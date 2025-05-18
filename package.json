@@ -101,3 +101,7 @@
     "workbox-window": "^7.3.0"
   }
 }
+"scripts": {
+  "generate-sitemap": "ts-node scripts/generate-sitemap.ts",
+  "build": "npm run generate-sitemap && next build"
+}
