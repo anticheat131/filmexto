@@ -1,11 +1,11 @@
+// src/pages/api/sitemap.xml.ts
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const DOMAIN = 'https://fmovies4u.com';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  // Dummy example — replace with your real IDs or TMDB fetch
-  const movieUrls = Array.from({ length: 100 }, (_, i) => `${DOMAIN}/movie/${100000 + i}`);
-  const tvUrls = Array.from({ length: 100 }, (_, i) => `${DOMAIN}/tv/${200000 + i}`);
+  const movieUrls = Array.from({ length: 5 }, (_, i) => `${DOMAIN}/movie/${100000 + i}`);
+  const tvUrls = Array.from({ length: 5 }, (_, i) => `${DOMAIN}/tv/${200000 + i}`);
 
   const urls = [...movieUrls, ...tvUrls];
 
@@ -24,6 +24,5 @@ ${urls
 </urlset>`;
 
   res.setHeader('Content-Type', 'text/xml');
-  res.write(xml);
-  res.end();
+  res.status(200).send(xml);
 }
