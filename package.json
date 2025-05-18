@@ -106,3 +106,8 @@
   "build": "npm run generate-sitemap && next build",
   "generate-sitemap": "ts-node scripts/generate-sitemap.ts"
 }
+"scripts": {
+  "generate-sitemap": "node scripts/generate-sitemap.js",
+  "build": "npm run generate-sitemap && next build",
+  "dev": "next dev"
+}
